@@ -33,5 +33,21 @@ namespace Function1Testing
             }
             return 0;
         }
+        public bool IsValidDate(int day, int month, int year)
+        {
+            if (month >= 1 && month <= 12)
+            {
+                if (day >= 1) {
+                    if (day <= CheckDayinMonth(month, year))
+                    {
+                        return true;
+                    }
+                    else return false;
+                }
+                else return false;
+            }
+            else return false;
+           
+        }
     }
 }
